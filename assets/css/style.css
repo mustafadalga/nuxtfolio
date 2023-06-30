@@ -1,0 +1,9 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .markdown {
+    @apply prose prose-blue max-w-none mt-4;
+  }
+}
