@@ -15,6 +15,8 @@ const { name } = route.params;
 branch.value = await fetchBranch(name);
 readme.value = await fetchReadme(name, branch.value);
 const validRepository = computed(() => branch.value)
+const imageURL = getImage();
+
 const readmeContent = computed(() => {
   const md = new MarkdownIt({
     html: true,
@@ -37,7 +39,7 @@ async function handleInvalidRepository () {
 
 useHead({
   title: `${name} - Mustafa Dalga Project Showcases`,
-  meta: [ { name: 'description', content:`${name} - Mustafa Dalga Project Showcases`  } ]
+  meta: [ { name: 'description', content: `${name} - Mustafa Dalga Project Showcases` } ]
 })
 </script>
 
@@ -47,7 +49,7 @@ useHead({
   >
     <img
         alt="blog photo"
-        src="https://raw.githubusercontent.com/mustafadalga/fly-high/main/frontend/src/assets/images/airplane-4.jpeg"
+        :src="imageURL"
         class="max-h-96 w-full object-cover"
     />
     <div class="max-w-5xl mx-auto mt-4 p-4 overflow-hidden w-full grid">
