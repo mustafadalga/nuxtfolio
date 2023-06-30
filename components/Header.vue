@@ -28,7 +28,7 @@ const links = [
   },
 ]
 const handleLink = (path: string) => {
-  toggleMenu();
+  isMenuOpen.value = false;
   router.push({ path: path })
 }
 
