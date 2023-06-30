@@ -1,0 +1,32 @@
+{
+  "name": "nuxtfolio",
+  "private": true,
+  "scripts": {
+    "build": "nuxt build",
+    "dev": "killall -9 node && nuxt dev",
+    "generate": "nuxt generate",
+    "preview": "nuxt preview",
+    "postinstall": "nuxt prepare"
+  },
+  "devDependencies": {
+    "@nuxt/devtools": "latest",
+    "@nuxtjs/tailwindcss": "^6.8.0",
+    "@types/aos": "^3.0.4",
+    "@types/node": "^18",
+    "nuxt": "^3.6.0",
+    "typescript": "latest"
+  },
+  "dependencies": {
+    "@fortawesome/fontawesome-svg-core": "^6.4.0",
+    "@fortawesome/free-brands-svg-icons": "^6.4.0",
+    "@fortawesome/free-solid-svg-icons": "^6.4.0",
+    "@fortawesome/vue-fontawesome": "^3.0.3",
+    "@pinia/nuxt": "^0.4.11",
+    "@tailwindcss/typography": "^0.5.9",
+    "aos": "^2.3.4",
+    "markdown-it": "^13.0.1"
+  },
+  "overrides": {
+    "vue": "latest"
+  }
+}
