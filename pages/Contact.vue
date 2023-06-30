@@ -1,5 +1,8 @@
 <script setup lang="ts">
-const formEmbedCode = `<iframe src="https://docs.google.com/forms/d/e/1FAIpQLSeQnNnwvAX2mpcYRKzUbGSTX8xy2ly9BG5T3j_bTghlY-sleA/viewform?embedded=true" width="640" height="824" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>`;
+const formEmbedCode = `<iframe
+ src="https://docs.google.com/forms/d/e/1FAIpQLSeQnNnwvAX2mpcYRKzUbGSTX8xy2ly9BG5T3j_bTghlY-sleA/viewform?embedded=true"
+ class="w-full h-full"
+  width="640" height="824" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>`;
 
 useHead({
   title: "Mustafa Dalga - Contact",
@@ -9,5 +12,5 @@ useHead({
 
 <template>
     <div v-html="formEmbedCode"
-    class="mx-auto"></div>
+    class="mx-auto w-full"></div>
 </template>
