@@ -1,5 +1,5 @@
 <script setup lang="ts">
-await navigateTo('https://medium.com/@mustafadalga', {
+await navigateTo('https://sft.hashnode.dev', {
   external: true
 })
 
