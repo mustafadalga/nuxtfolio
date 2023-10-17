@@ -91,10 +91,6 @@ export const useRepositoriesStore = defineStore("repositories", () => {
     }
   };
 
-  function orderRepositories(){
-    state.repositories.sort((a, b) =>b.stars-a.stars);
-  }
-
   function setTotalPage() {
     state.totalPage = Math.round(state.repoCount / state.perPage + 0.5);
   }
@@ -104,14 +100,12 @@ export const useRepositoriesStore = defineStore("repositories", () => {
     if (state.currentPage < state.totalPage) {
       state.currentPage++;
       await setRepositories();
-      orderRepositories()
     }
   }
   async function init() {
     await setRepoCount();
     await setTotalPage();
     await setRepositories();
-    orderRepositories()
   }
 
   return {
